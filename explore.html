@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Explore  - Prepr Network </title>
+  <link rel="shortcut icon" href="https://preprmedialive.s3.amazonaws.com/public/adminassets/dist/img/favicon.ico">
+  <link rel="icon" href="https://preprlabs.org/uploads/settings/favicon.ico" type="image/x-icon">
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="assets/fonts/feather/feather.min.css">
+  <link rel="stylesheet" href="assets/libs/highlight.js/styles/vs2015.css">
+  <link rel="stylesheet" href="assets/libs/quill/dist/quill.core.css">
+  <link rel="stylesheet" href="assets/libs/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="assets/libs/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Theme CSS -->
+
+  <link rel="stylesheet" href="assets/css/theme.min.css" id="stylesheetLight">
+  <link rel="stylesheet" href="assets/css/theme-dark.min.css" id="stylesheetDark">
+</head>
+<body>
+  <!-- SideBar --->
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class-"navbar-brand" href="explore.html">
+        <img src="assets/img/logo.png" alt="..." class="navbar-brand-img
+        mx-auto">
+      </a>
+
+      <!-- User (xs) -->
+      <div class="navbar-user d-md-none">
+
+        <!-- Dropdown -->
+        <div class="dropdown">
+
+          <!-- Toggle -->
+          <a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="avatar avatar-sm avatar-online">
+              <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+            </div>
+          </a>
+
+          <!-- Menu -->
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sidebarIcon">
+            <a href="profile-posts.html" class="dropdown-item">Profile</a>
+            <a href="settings.html" class="dropdown-item">Settings</a>
+            <hr class="dropdown-divider">
+            <a href="sign-in.html" class="dropdown-item">Logout</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="collapse navbar-collapse" id="sidebarCollapse">
+        <!-- Divider -->
+        <hr class="navbar-divider my-3">
+
+        <!-- Navigation -->
+        <ul class="navbar-nav mb-md-4">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#sidebarComponents" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarComponents">
+              <i class="fe fe-user"></i> Account
+            </a>
+            <div class="collapse " id="sidebarComponents">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a class="nav-link " href="https://preprlabs.org/profile/le_marco">
+                    My Account
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#">
+                    Inbox
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="projects.html">
+                    Projects
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="labs.html">
+                    Labs
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#">
+                    Notifications
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#">
+                    Achievements
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#">
+                    Settings
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#">
+                    Log out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="explore.html">
+              <i class="fe fe-clipboard"></i> Explore
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="challenges.html">
+              <i class="fe fe-clipboard"></i> Challenges
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">
+              <i class="fe fe-clipboard"></i> Resources
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">
+              <i class="fe fe-clipboard"></i> News Feed
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="#">
+              <i class="fe fe-clipboard"></i> Organisation
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">
+              <i class="fe fe-clipboard"></i> Help
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="main-content">
+
+    <nav id="topbar" class="navbar navbar-expand-md navbar-light d-none d-md-flex">
+      <div class="container-fluid">
+
+        <!-- Form -->
+        <form class="form-inline mr-4 d-none d-md-flex">
+          <div class="input-group input-group-flush input-group-merge" data-toggle="lists" data-lists-values="[&quot;name&quot;]">
+
+            <!-- Input -->
+            <input type="search" class="form-control form-control-prepended dropdown-toggle search" data-toggle="dropdown" placeholder="Search" aria-label="Search">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="fe fe-search"></i>
+              </div>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- User -->
+        <div class="navbar-user">
+
+          <!-- Dropdown -->
+          <div class="dropdown mr-4 d-none d-md-flex">
+
+            <!-- Toggle -->
+            <a href="#" class="text-muted" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="icon active">
+                <i class="fe fe-bell"></i>
+              </span>
+            </a>
+
+          </div>
+
+          <!-- Dropdown -->
+          <div class="dropdown">
+
+            <!-- Toggle -->
+            <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+            </a>
+
+            <!-- Menu -->
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="profile-posts.html" class="dropdown-item">Profile</a>
+              <a href="settings.html" class="dropdown-item">Settings</a>
+              <hr class="dropdown-divider">
+              <a href="sign-in.html" class="dropdown-item">Logout</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </nav>
+    <div class="header">
+      <!-- div class="bg-cover" style="background-image: url(assets/img/covers/team-cover.jpg);"-->
+
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row align-items-center">
+            <div class="col">
+              <ul class="nav nav-tabs nav-overflow header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" id="nav-challenges-tab" data-toggle="tab" href="#nav-challenges" role="tab" aria-controls="nav-challenges" aria-selected="true">
+                    Challenges
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="nav-labs-tab" data-toggle="tab" href="#nav-labs" role="tab" aria-controls="nav-labs" aria-selected="false">
+                    Labs
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="nav-projects-tab" data-toggle="tab" href="#nav-projects" role="tab" aria-controls="nav-projects" aria-selected="false">
+                    Projects
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--/div-->
+    </div>
+
+
+    <div class="container-fluid">
+
+      <div class="tab-content">
+        <div class="tab-pane fade active show" id="nav-challenges" role="tabpanel">
+          <div class="row listAlias">
+            <div class="col-12 col-md-6 col-xl-4">
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/kFAKrsgG91TV0ZoQsy3IhWZmI.jpg" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Low-cost monitoring system for COVID-19 patients</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        NRC is seeking a low cost system (unit cost <$25) that can continuously measure temperature, peripheral capillary oxygen saturation (SpO2), blood pressure (BP), pulse and respiration rates, and transmit...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">29%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/tmx4zAFyMKbA39JouysPRFqor.jpg" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Point of Care & Home Diagnostic Kit for COVID-19</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        The Public Health Agency of Canada (PHAC) and National Research Council (NRC) are seeking a solution that will diagnose individuals affected by COVID-19 within 3 days of the start of their symptoms using...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">100%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <div class="avatar avatar-xs">
+                            <div class="avatar-title rounded-circle">+7</div>
+                          </div>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/LGtxjGeIkje2QJm7GPK5s4So4.png" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Recycled Plastic Ceiling Tiles</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        View more details and submit the project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00090.html Problem statement The challenge we are facing is global and departmental. Globally...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">65%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <div class="avatar avatar-xs">
+                            <div class="avatar-title rounded-circle">+7</div>
+                          </div>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/9sOWMH3o90jdBatFXqAlVA3pf.png" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Diverting End of Life Vehicle Plastics from Landfills</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        View more details and submit your project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00092.html Problem statement It is estimated that Canada generates between 300 and...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">65%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/X594nZSBbXgvICcHUa4s1EjeN.png" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Sensing Technology for Monitoring Microplastics in Marine Environments</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        View more details and submit your project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00091.html Problem statement Microplastics are plastic...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">80%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <div class="avatar avatar-xs">
+                            <div class="avatar-title rounded-circle">+13</div>
+                          </div>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/TAYbhXQ5Nbbc4Zfm2qhrc5QAi.png" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">E-Waste</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        View more details and submit your project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00085.html Problem statement This challenge is highly relevant to SSC and ECCC's mandate and the federal gove...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">77%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 77%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/u5jflO7eH9zXK99FrOYYv1Fc8.png" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Sustainable Alternatives to Plastic Packaging</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        View more details and submit your project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00087.html Problem statement Canada has committed to a vision of zero plastic waste where all pl...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">12%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/2OP2IlVjNsYXZ0mGlbzkIERls.png" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Textiles and Microfibers</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        View more details and submit your project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00086.html Problem statement Canada has committed to a vision of zero plastic waste where all plastics stay in th...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">65%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col">
+              <nav aria-label="...">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled"><a class="page-link " href="#">Previous</a></li>
+                  <li class="page-item active"><a class="page-link " href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"><a class="page-link" href="#">6</a></li>
+                  <li class="page-item"><a class="page-link" href="#">7</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-labs" role="tabpanel">
+          <div class="row listAlias">
+            <div class="col-12 col-md-6 col-xl-4">
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/1PImiYD8mRPr8edpL4SiIKCMs.png" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Low-cost monitoring system for COVID-19 patients</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        NRC is seeking a low cost system (unit cost <$25) that can continuously measure temperature, peripheral capillary oxygen saturation (SpO2), blood pressure (BP), pulse and respiration rates, and transmit...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">29%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/g7wLeElO5hx1Chb7iZHYSBcId.png" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Point of Care & Home Diagnostic Kit for COVID-19</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        The Public Health Agency of Canada (PHAC) and National Research Council (NRC) are seeking a solution that will diagnose individuals affected by COVID-19 within 3 days of the start of their symptoms using...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">100%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <div class="avatar avatar-xs">
+                            <div class="avatar-title rounded-circle">+7</div>
+                          </div>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/Rxpj4hFJeHAtwDgD89MZWJRKl.png" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Recycled Plastic Ceiling Tiles</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        View more details and submit the project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00090.html Problem statement The challenge we are facing is global and departmental. Globally...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">65%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <div class="avatar avatar-xs">
+                            <div class="avatar-title rounded-circle">+7</div>
+                          </div>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/r5lG8APThqgn0PrROh2VdyN7oO8HnUuhSwnS5dft.jpeg" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Diverting End of Life Vehicle Plastics from Landfills</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        View more details and submit your project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00092.html Problem statement It is estimated that Canada generates between 300 and...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">65%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/VIxGN9PkUHlzKFkSBmIkKvhRfgXrS1xJC0A78R1j.jpeg" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Diverting End of Life Vehicle Plastics from Landfills</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        View more details and submit your project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00092.html Problem statement It is estimated that Canada generates between 300 and...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">65%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+
+              <!-- Card -->
+              <div class="card">
+                <a href="challenge_details.html">
+                  <img src="assets/img/UvQUdiFJVsA03bhbyerRRF9LirO9r6k5v8wo7Vk5.png" alt="..." class="card-img-top">
+                </a>
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-2 name">
+                        <a href="challenge_details.html">Diverting End of Life Vehicle Plastics from Landfills</a>
+                      </h4>
+
+                      <!-- Subtitle -->
+                      <p class="card-text small text-muted">
+                        View more details and submit your project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00092.html Problem statement It is estimated that Canada generates between 300 and...
+                      </p>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#!" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#!" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                  <!-- Divider -->
+                  <hr>
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-auto">
+
+                          <div class="small mr-2">65%</div>
+
+                        </div>
+                        <div class="col">
+
+                          <!-- Progress -->
+                          <div class="progress progress-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                      <div class="row no-gutters">
+                        <small class="text-secondary">Deadline April 20th</small>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Avatar group -->
+                      <div class="avatar-group">
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                        <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Myles">
+                          <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div> <!-- / .card-body -->
+              </div>
+
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col">
+              <nav aria-label="...">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled"><a class="page-link " href="#">Previous</a></li>
+                  <li class="page-item active"><a class="page-link " href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-projects" role="tabpanel">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+
+                <!-- Card -->
+                <div class="card card-inactive">
+                  <div class="card-body text-center">
+
+                    <!-- Image -->
+                    <img src="assets/img/illustrations/scale.svg" alt="..." class="img-fluid" style="max-width: 182px;">
+
+                    <!-- Title -->
+                    <h1>
+                      No projects yet.
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="text-muted">
+                      Create a report to find our more about this project.
+                    </p>
+
+                    <!-- Button -->
+                    <a href="#!" class="btn btn-primary">
+                      Create Project
+                    </a>
+
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Libs JS -->
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/libs/chart.js/dist/Chart.min.js"></script>
+  <script src="assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+  <script src="assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+  <script src="assets/libs/list.js/dist/list.min.js"></script>
+  <script src="assets/libs/quill/dist/quill.min.js"></script>
+  <script src="assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="assets/libs/select2/dist/js/select2.min.js"></script>
+  <script src="assets/libs/chart.js/Chart.extension.min.js"></script>
+
+  <!-- Theme JS -->
+  <script src="assets/js/theme.min.js"></script>
+
+</body>
+</html>
